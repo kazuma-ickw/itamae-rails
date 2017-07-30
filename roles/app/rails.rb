@@ -18,6 +18,7 @@ template "create .env" do
   path node["app_dir"] + "/.env"
   variables(
     mysql_user_name: node[:secrets][:mysql_user_name],
-    mysql_password: node[:secrets][:mysql_password]
+    mysql_password: node[:secrets][:mysql_password],
+    mysql_host: node[:secrets][:mysql_host]
   )
 end
