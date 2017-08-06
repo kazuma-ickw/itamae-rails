@@ -9,7 +9,7 @@ server {
     #charset koi8-r;
     #access_log  /var/log/nginx/log/host.access.log  main;
 
-    root /srv/admin;
+    root <%= @root_path %>;
 
     location / {
       try_files $uri/index.html $uri @unicorn;
