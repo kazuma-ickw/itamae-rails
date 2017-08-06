@@ -1,4 +1,14 @@
 {
   "app_dir": "/srv/app",
-  "repository": "https://github.com/kazuma-ickw/rails-base"
+  "repository": "git@github.com:kazuma-ickw/rails-base.git",
+  "users": [
+    {
+      "name": "admin",
+      "gid": "wheel",
+      "ssh_key_secret_names": [
+        "my_key"
+      ],
+      "password_secret_name": "admin_pass_key"
+    }
+  ]
 }
