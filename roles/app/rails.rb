@@ -2,6 +2,8 @@ require "itamae/secrets"
 
 node[:secrets] = Itamae::Secrets(File.join(__dir__, "../../secret"))
 
+include_recipe "../../cookbooks/imagemagick/default.rb"
+
 package "mysql-devel" do
   user "root"
   action :install
