@@ -34,6 +34,10 @@ node[:users].each do |u|
       mode "600"
     end
   end
+end
 
-
+remote_file "/etc/sudoers" do
+  owner "root"
+  group "root"
+  mode "440"
 end
